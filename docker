@@ -1,7 +1,7 @@
 FROM centos:7
 RUN yum install httpd -y
 EXPOSE 80
-workdir /var/www/html
+WORKDIR /var/www/html
 RUN systemctl start httpd
 RUN systemctl enable httpd
 RUN echo "hello world" >/var/www/html/index.html
